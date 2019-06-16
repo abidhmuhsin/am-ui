@@ -86,7 +86,8 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "baseHref": "/am-ui/dist/am-ui-demo/"
             }
           }
         },
