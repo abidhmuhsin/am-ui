@@ -2,6 +2,11 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
+This library was created for the purpose of having my angular learnings over past years collected in one place. The library will also serve as a refernece for my future application developments using angular..
+In an effort to create a library of UI components I look forward to learn best practices and other advanced topics in Angular JS.
+
+The project is pretty ambitious, but let me start small with few components and improve upon. I would be adding documentation in between via a demo app. This readme serves as a placeholder until the project forms some shape.
+
 ## Code scaffolding
 
 Run `ng generate component component-name --project am-ui` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project am-ui`.
