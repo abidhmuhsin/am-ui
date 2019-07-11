@@ -1,9 +1,20 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div>
+  <div style="text-align:center">
+    <h1>Welcome to {{ title }}!</h1>
 
-  <am-am-ui></am-am-ui>
- </div>
-
+    <am-am-ui></am-am-ui>
+  </div>
+  <div style="width: 50%">
+    <am-tabbedpanes>
+      <am-tabbedpane [title]="'Heading 1'">Tab 1 Content</am-tabbedpane>
+      <am-tabbedpane title="Heading 2">
+        <h2>This is my Tab 2 Content</h2>
+      </am-tabbedpane>
+      <am-tabbedpane [title]="'Heading 3'">Tab 3 Content</am-tabbedpane>
+      <am-tabbedpane title="Heading 4">
+        <h2>This is my Tab 4 Content</h2>
+      </am-tabbedpane>
+    </am-tabbedpanes>
+  </div>
+</div>
