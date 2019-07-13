@@ -1,12 +1,7 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  AfterContentInit,
-  QueryList,
-  ContentChildren
-} from '@angular/core';
+# sfs
 
+## edf
+```typescript
 @Component({
   selector: 'am-tabbedpane',
   styleUrls: ['./am-tabbedpane.component.css'],
@@ -20,18 +15,34 @@ export class AmTabbedpaneComponent implements OnInit {
   @Input() title: string;
   @Input() active = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 }
+```
+```html
+<div class="tabbedpanes-wrapper">
+  <div class="tabheading-wrapper">
+    <span
+      class="tabheading"
+      *ngFor="let tab of tabComponents"
+      (click)="selectTab(tab)"
+      [class.active]="tab.active"
+    >
+      <a href="#">{{ tab.title }}</a>
+    </span>
+  </div>
+  <ng-content></ng-content>
+</div>
+```
 
-@Component({
-  selector: 'am-tabbedpanes',
-  styleUrls: ['./am-tabbedpane.component.css'],
-  template: `
-    <div class="tabbedpanes-wrapper">
+Now lets remove `<a href="#">` tag for heading and use a `div` with keyboard navigation support.  
+Added `tabindex="0"` and `(keydown.enter)="selectTab(tab)"`
+
+```html
+ <div class="tabbedpanes-wrapper">
       <div class="tabheading-wrapper">
-        <div
+        <span
           tabindex="0"
           class="tabheading"
           *ngFor="let tab of tabComponents"
@@ -40,14 +51,15 @@ export class AmTabbedpaneComponent implements OnInit {
           [class.active]="tab.active"
         >
           {{ tab.title }}
-        </div>
+        </span>
       </div>
       <ng-content></ng-content>
     </div>
-  `
-})
+```
+
+```typescript
 export class AmTabbedpanesComponent implements AfterContentInit {
-  @ContentChildren(AmTabbedpaneComponent) tabComponents: QueryList<AmTabbedpaneComponent>;
+  @ContentChildren(AmTabbedpaneComponent) tabComponents:QueryList<AmTabbedpaneComponent>;
 
   // ContentChildren will be set once AfterContentInit is called
   ngAfterContentInit() {
@@ -68,3 +80,4 @@ export class AmTabbedpanesComponent implements AfterContentInit {
     tabComponent.active = true;
   }
 }
+```
