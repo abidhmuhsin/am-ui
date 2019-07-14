@@ -48,7 +48,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/am-ui-demo",
+            "outputPath": "docs",
             "index": "projects/am-ui-demo/src/index.html",
             "main": "projects/am-ui-demo/src/main.ts",
             "polyfills": "projects/am-ui-demo/src/polyfills.ts",
@@ -87,7 +87,7 @@
                   "maximumError": "5mb"
                 }
               ],
-              "baseHref": "/am-ui/dist/am-ui-demo/"
+              "baseHref": "/"
             }
           }
         },
