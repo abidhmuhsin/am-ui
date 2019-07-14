@@ -8,7 +8,8 @@ The project is pretty ambitious, but let me start small with few components and 
 
 # AmUi Demo
 
-For live demo [click here](https://abidhmuhsin.github.io/am-ui/dist/am-ui-demo).
+For live demo [click here](https://am-ui.netlify.com).
+The demo project is currently using netlify for Build and deploy. It is configured to be autodeployed via netlify for every new checkins.
 
 ## Development server
 

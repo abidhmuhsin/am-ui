@@ -48,7 +48,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/am-ui-demo",
             "index": "projects/am-ui-demo/src/index.html",
             "main": "projects/am-ui-demo/src/main.ts",
             "polyfills": "projects/am-ui-demo/src/polyfills.ts",
