@@ -1,0 +1,14 @@
+<div class="accordion-wrapper">
+	<div tabindex="0" class="accordion-header" (dblclick)="toggleTab();" (keydown.enter)="toggleTab();">
+		<div class="header-title">
+			{{ title }}
+		</div>
+
+		<div class="accordion-toggle-icon" (click)="toggleTab();">
+			{{ (expanded? '-' : '+') }}
+		</div>
+	</div>
+	<div class="accordion-content" [hidden]="!expanded">
+		<ng-content></ng-content>
+	</div>
+</div>
