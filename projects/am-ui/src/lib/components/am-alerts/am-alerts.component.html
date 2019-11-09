@@ -1,5 +1,5 @@
 <div class="alert-wrapper">
-  <ng-container *ngFor="let alert of alertsService.allAlerts">
+  <ng-container *ngFor="let alert of alertsService.getAllAlerts()">
     <div *ngIf="!alert.isClosed" class="alert" [ngClass]="alert.type">
       <div class="close-button" (click)="close(alert)">X</div>
       <ng-container *ngFor="let message of alert.multiLineMessage">

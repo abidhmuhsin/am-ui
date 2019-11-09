@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject } from 'rxjs';
-
+import { Subject, BehaviorSubject, Observable, interval, timer } from 'rxjs';
+import { timeout } from 'rxjs/operators';
 export interface AlertMesssage {
   alertId: number;
   type: string;
@@ -14,21 +14,26 @@ export interface AlertMesssage {
 })
 export class AmAlertsService {
 
-  private alertsSubject: Subject<any>;
+  /*
+  private alertsSubject: Subject<any>; 
+  Use a subject and emit each new alerts into component,
+  then maintain alertsArray inside component so that
+   no one from outside can modify already created alerts.
+  */
   private alertCounter: number;
-  public allAlerts: AlertMesssage[];
+  private allAlerts: AlertMesssage[];
   private maxAlertsInBuffer: number;
   private defaultTimeOut: number; // in seconds
 
   constructor() {
-    this.alertsSubject = new BehaviorSubject<{}>(-1);
+    //  this.alertsSubject = new BehaviorSubject<{}>(-1);
     this.alertCounter = 0;
     this.defaultTimeOut = 15;  // 15 seconds
     this.maxAlertsInBuffer = 10;
     this.allAlerts = [];
   }
 
-  private _createAlert(alertType: string, alertMessageLines: string[], timeToKeepOpen: number) {
+  private _createAlert(alertType: string, alertMessageLines: string[], timeToKeepOpen: number): number {
     const newAlert: AlertMesssage =
     {
       alertId: this.alertCounter++,
@@ -37,14 +42,26 @@ export class AmAlertsService {
       timeOut: timeToKeepOpen,
       isClosed: false
     };
-    // destroy all closed alerts from memory.
-    this._destroyClosedAlerts();
-    // if more than allowed messages in buffer, push the oldest one.
-    if (this.allAlerts.length > this.maxAlertsInBuffer){
-      this.allAlerts.shift();  // shift() method removes the first item of an array.i.e oldest alert;
+
+    // Clean up closed messages
+    if (this.allAlerts.length > this.maxAlertsInBuffer) {
+      // destroy all closed alerts from memory.
+      this._destroyClosedAlerts();
+      // if more than allowed open messages in buffer, push the oldest one.
+      if (this.allAlerts.length > this.maxAlertsInBuffer) {
+        this.allAlerts.shift();  // shift() method removes the first item of an array.i.e oldest alert;
+      }
     }
+
+    // set the alert autoclose timer
+    setTimeout(() => {
+      newAlert.isClosed = true;
+    }, timeToKeepOpen * 1000);
+
     this.allAlerts.push(newAlert);
-    this.alertsSubject.next(newAlert);
+    // this.alertsSubject.next(newAlert);
+
+    return newAlert.alertId;
   }
 
   /* Below helper method takes in (string[] | string) ---> converts into string[] */
@@ -55,11 +72,21 @@ export class AmAlertsService {
   }
 
   private _destroyAlert(alertId: number) {
-      this.allAlerts  = this.allAlerts.filter(alert => alert.alertId === alertId ? false : true );
+    this.allAlerts = this.allAlerts.filter(alert => alert.alertId === alertId ? false : true);
   }
   private _destroyClosedAlerts() {
-    this.allAlerts  = this.allAlerts.filter(alert => alert.isClosed ? false : true );
-}
+    this.allAlerts = this.allAlerts.filter(alert => alert.isClosed ? false : true);
+  }
+
+  public getAllAlerts() {
+    return this.allAlerts;
+  }
+
+  // method to destroy all alerts at once;
+  public clearAll() {
+    this.allAlerts = [];
+    return this;
+  }
 
   public info(alertMessageLines: string[] | string, timeToKeepOpen?: number): AmAlertsService {
     this._createAlert(
