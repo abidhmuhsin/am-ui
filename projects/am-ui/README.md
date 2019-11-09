@@ -2,10 +2,14 @@
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
 
-This library was created for the purpose of having my angular learnings over past years collected in one place. The library will also serve as a refernece for my future application developments using angular..
-In an effort to create a library of UI components I look forward to learn best practices and other advanced topics in Angular JS.
+This library was created for the purpose of having my angular learnings over past years collected in one place. The library will also serve as a refernece for creating components in my future application developments using angular.. In an effort to create a library of UI components I look forward to learn best practices and other advanced topics in Angular JS.
 
-The project is pretty ambitious, but let me start small with few components and improve upon. I would be adding documentation in between via a demo app. This readme serves as a placeholder until the project forms some shape.
+Let me start small with few components and improve upon. I would be adding documentation in between via a demo app. This readme serves as a placeholder until the project forms some shape.
+
+## Local Development
+
+First run `ng build am-ui` to build the library which will place the lib-code in the distribution folder. Then `ng serve am-ui-demo` in another console to serve the demo project and point your browser to http://localhost:4200 for seeing the demo project in action.
+
 
 ## Code scaffolding
 

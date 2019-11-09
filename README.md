@@ -2,18 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
-This library was created for the purpose of having my angular learnings over past years collected in one place. The library will also serve as a refernece for my future application developments using angular.. In an effort to create a library of UI components I look forward to learn best practices and other advanced topics in Angular JS.
+This library was created for the purpose of having my angular learnings over past years collected in one place. The library will also serve as a refernece for creating components in my future application developments using angular.. In an effort to create a library of UI components I look forward to learn best practices and other advanced topics in Angular JS.
 
-The project is pretty ambitious, but let me start small with few components and improve upon. I would be adding documentation in between via a demo app. This readme serves as a placeholder until the project forms some shape.
+Let me start small with few components and improve upon. I would be adding documentation in between via a demo app. This readme serves as a placeholder until the project forms some shape.
 
 # AmUi Demo
 
 For live demo [click here](https://am-ui.netlify.com).
 The demo project is currently using netlify for Build and deploy. It is configured to be autodeployed via netlify for every new checkins.
 
-## Development server
+## Local Development
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+First run `ng build am-ui` to build the library which will place the lib-code in the distribution folder. Then `ng serve am-ui-demo` in another console to serve the demo project and point your browser to http://localhost:4200 for seeing the demo project in action.
 
 ## Code scaffolding
 
@@ -22,6 +22,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+### Netlify build commands
+ng build && (ng build am-ui-demo --prod)
 
 ## Running unit tests
 
