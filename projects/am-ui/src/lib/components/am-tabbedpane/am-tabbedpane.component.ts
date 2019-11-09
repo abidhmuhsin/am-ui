@@ -4,7 +4,9 @@ import {
   Input,
   AfterContentInit,
   QueryList,
-  ContentChildren
+  ContentChildren,
+  Output,
+  EventEmitter
 } from '@angular/core';
 
 @Component({
@@ -48,6 +50,7 @@ export class AmTabbedpaneComponent implements OnInit {
 })
 export class AmTabbedpanesComponent implements AfterContentInit {
   @ContentChildren(AmTabbedpaneComponent) tabComponents: QueryList<AmTabbedpaneComponent>;
+  @Output() tabChanged: EventEmitter<string> = new EventEmitter(); // to notify tab change
 
   // ContentChildren will be set once AfterContentInit is called
   ngAfterContentInit() {
@@ -64,6 +67,8 @@ export class AmTabbedpanesComponent implements AfterContentInit {
     // deactivate all tabs
     this.tabComponents.toArray().forEach(tab => (tab.active = false));
 
+    // emit tabChangedEvent
+    this.tabChanged.emit(tabComponent.title);
     // activate the tab the user has clicked on.
     tabComponent.active = true;
   }
