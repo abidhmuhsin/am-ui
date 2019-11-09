@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AmAlertsService } from './am-alerts.service';
-import { AlertMesssage } from 'am-ui';
+import { AlertMesssage } from './am-alerts.service';
 
 @Component({
   selector: 'am-alerts',
@@ -14,5 +14,5 @@ export class AmAlertsComponent {
 
     close(alert: AlertMesssage) {
         alert.isClosed = true;
-    } 
+    }
 }
