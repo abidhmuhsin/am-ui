@@ -3,8 +3,7 @@ import { AmDialogueService } from 'am-ui';
 
 @Component({
   selector: 'app-confirm-dialogue',
-  templateUrl: './confirm-dialogue.component.html',
-  styleUrls: ['./confirm-dialogue.component.css']
+  templateUrl: './confirm-dialogue.component.html'
 })
 export class ConfirmDialogueComponent {
 

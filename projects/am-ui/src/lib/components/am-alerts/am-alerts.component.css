@@ -1,0 +1,59 @@
+.alert-wrapper {
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  /* transform: translate(-50px, 50px); when using top0,right0 */
+
+  /* padding: 1rem; */
+  /* Z-index of confirmation dialog box should be greater than the Z-index of on acreen components*/
+  z-index: 9;
+  max-width: 30%;
+}
+
+.alert-wrapper .alert {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 15px;
+  min-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.alert-wrapper .success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-wrapper .error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-wrapper .info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-wrapper .warn {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color:grey;
+  cursor: default;
+  font-size: 0.75em;
+}
+.close-button:hover {
+    font-weight: bold;
+    color:#000;
+  }

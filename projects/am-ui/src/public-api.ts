@@ -7,3 +7,4 @@ export * from './lib/am-ui.component';
 export * from './lib/am-ui.module';
 
 export * from './lib/components/am-dialogue/am-dialogue.service';
+export * from './lib/components/am-alerts/am-alerts.service';

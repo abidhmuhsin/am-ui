@@ -1,0 +1,12 @@
+<div class="alert-wrapper">
+  <ng-container *ngFor="let alert of alertsService.allAlerts">
+    <div *ngIf="!alert.isClosed" class="alert" [ngClass]="alert.type">
+      <div class="close-button" (click)="close(alert)">X</div>
+      <ng-container *ngFor="let message of alert.multiLineMessage">
+        <!-- Support multiline messages -->
+        <span [innerHtml]="message"></span>
+        <br/>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

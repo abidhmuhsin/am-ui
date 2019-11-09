@@ -5,14 +5,15 @@ import { AmTabbedpaneComponent, AmTabbedpanesComponent } from './components/am-t
 import { BrowserModule } from '@angular/platform-browser';
 import { AmAccordionComponent } from './components/am-accordion/am-accordion.component';
 import { AmDialogueComponent } from './components/am-dialogue/am-dialogue.component';
-import { AmDialogueService } from './components/am-dialogue/am-dialogue.service';
+import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
 
 @NgModule({
   declarations: [AmUiComponent,
     AmTabbedpaneComponent,
     AmTabbedpanesComponent,
     AmAccordionComponent,
-    AmDialogueComponent
+    AmDialogueComponent,
+    AmAlertsComponent
   ],
   imports: [BrowserModule , BrowserAnimationsModule
   ],
@@ -20,7 +21,8 @@ import { AmDialogueService } from './components/am-dialogue/am-dialogue.service'
     AmTabbedpaneComponent,
     AmTabbedpanesComponent,
     AmAccordionComponent,
-    AmDialogueComponent
+    AmDialogueComponent,
+    AmAlertsComponent
   ],
  // providers : [AmDialogueService]
  // AmDialogueService provided using annotation and mention in public-api.ts

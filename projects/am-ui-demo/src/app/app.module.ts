@@ -5,11 +5,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AmUiModule } from 'am-ui';
 import { ConfirmDialogueComponent } from './confirm-dialogue/confirm-dialogue.component';
+import { AlertsComponent } from './alerts/alerts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmDialogueComponent
+    ConfirmDialogueComponent,
+    AlertsComponent
   ],
   imports: [
     BrowserModule,

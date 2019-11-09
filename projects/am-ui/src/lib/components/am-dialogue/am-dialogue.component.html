@@ -1,25 +1,34 @@
 <div *ngIf="!isDialogHidden">
-	<!-- This part can be added to prevent clicking outside the dialog.
+  <!-- This part can be added to prevent clicking outside the dialog.
      <div class="backdrop" (click)="$event.stopPropagation();$event.preventDefault();hide()"></div> -->
-	<div class="backdrop"></div>
-	<div class="modal-confirm">
-		<div class="modal-body text-center">
-			<ng-content></ng-content>
-			<p>
-				<ng-container *ngFor="let message of messageLines">
-					<!-- Support multiline messages -->
-					<span [innerHtml]="message"></span>
-					<br/>
+  <div class="backdrop"></div>
+  <div class="modal-confirm">
+    <div class="modal-body text-center">
+      <ng-content></ng-content>
+      <p>
+        <ng-container *ngFor="let message of messageLines">
+          <!-- Support multiline messages -->
+          <span [innerHtml]="message"></span>
+          <br />
         </ng-container>
-			</p>
-			<!-- Display only initialised buttons. First button will be displayed always. Each button calls the method for sending response for appropriate action -->
-			<span class="buttons">
-				<button type="button" class="btn" (click)="confirm()">{{button1}}</button>
-				<button *ngIf="button2" type="button" class="btn" (click)="decline()">{{button2}}</button>
-				<button *ngIf="button3" type="button" class="btn btn-primary" (click)="cancel()">{{button3}}</button>
-			</span>
-		</div>
-
-
-	</div>
+      </p>
+      <!-- Display only initialised buttons. First button will be displayed always. Each button calls the method for sending response for appropriate action -->
+      <span class="buttons">
+        <button type="button" class="btn" (click)="confirm()">
+          {{ button1 }}
+        </button>
+        <button *ngIf="button2" type="button" class="btn" (click)="decline()">
+          {{ button2 }}
+        </button>
+        <button
+          *ngIf="button3"
+          type="button"
+          class="btn btn-primary"
+          (click)="cancel()"
+        >
+          {{ button3 }}
+        </button>
+      </span>
+    </div>
+  </div>
 </div>
