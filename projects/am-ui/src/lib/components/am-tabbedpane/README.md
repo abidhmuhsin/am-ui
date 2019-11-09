@@ -1,6 +1,6 @@
-# sfs
+# Tabbed Pane
 
-## edf
+## test
 ```typescript
 @Component({
   selector: 'am-tabbedpane',

@@ -1,0 +1,20 @@
+<div class="page-heading">
+  <h3>Reusable Angular Confirm Dialogue Component Demo</h3>
+</div>
+<p>
+    User Response: <b><i>{{ response }}</i></b>
+  </p>
+<button (click)="showConfirmationDialog()">Confirmation</button>
+Normal Confirm Dialog
+<br /><br/>
+<button (click)="showOkDialog()">OK Button</button>
+This button will show a multiline dialog
+
+<p>
+  <button (click)="showYesNoCancelDialog()">YesNoCancel</button>
+  Enter custom message to display: <input [(ngModel)]="message" />
+</p>
+
+
+<!-- Use below line in root of app or homepage which will be always active -->
+<am-dialogue></am-dialogue>

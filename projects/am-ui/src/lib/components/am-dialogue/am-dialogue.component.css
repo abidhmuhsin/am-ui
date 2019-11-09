@@ -1,0 +1,28 @@
+.modal-confirm {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  /* Z-index of confirmation dialog box should be greater than the Z-index of on acreen components*/
+  z-index: 11;
+
+  min-width:100px;
+
+}
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.text-center {
+  text-align: center;
+}
