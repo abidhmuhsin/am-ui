@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AmDialogueService } from 'am-ui';
+import { AmDialogueService, AmAlertsService } from 'am-ui';
 
 @Component({
   selector: 'app-confirm-dialogue',
@@ -7,7 +7,7 @@ import { AmDialogueService } from 'am-ui';
 })
 export class ConfirmDialogueComponent {
 
-  constructor(private dialog: AmDialogueService) { }
+  constructor(private dialog: AmDialogueService,private alertsService: AmAlertsService) { }
 
   message =  'Click Yes to confirm. No to reject or Cancel to Cancel the dialog without any action';
   response;
@@ -18,13 +18,18 @@ export class ConfirmDialogueComponent {
       .subscribe(userAction => {
         if (userAction) {
           this.response = 'yes clicked';
-        } else {  this.response = 'no clicked'; }
+          this.alertsService.clearAll().info(this.response, 5);
+        } else {
+        this.response = 'no clicked';
+        this.alertsService.clearAll().info(this.response, 5);
+      }
       });
   }
 
   showYesNoCancelDialog() {
     this.dialog.yesNoCancelDialog(this.message).subscribe(userAction => {
      this.response = userAction;
+     this.alertsService.clearAll().info('Subscrition returned: <b>' + this.response + '</b>', 5);
     });
   }
 
@@ -32,6 +37,7 @@ export class ConfirmDialogueComponent {
     const multilineMsg = ['This is first line.', 'This is second line.']
     this.dialog.okDialog(multilineMsg).subscribe(userAction => {
       this.response = userAction;
+      this.alertsService.clearAll().info('Subscrition returned: <b>' + this.response + '</b>', 5);
     });
   }
 }

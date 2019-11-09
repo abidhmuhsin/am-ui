@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AmAlertsService } from 'am-ui';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'am-ui-demo';
+
+  constructor(private alertService: AmAlertsService){}
+
+  onTabChange(tabTitle) {
+    this.alertService.info(['Tab changed to: ' + tabTitle , 'Changed tabId captured from `tabChanged` EventEmitter'] , 5);
+  }
 }
