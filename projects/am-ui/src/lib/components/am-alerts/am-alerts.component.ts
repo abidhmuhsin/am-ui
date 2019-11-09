@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AmAlertsService } from './am-alerts.service';
-import { AlertMesssage } from 'am-ui/am-ui';
+import { AlertMesssage } from 'am-ui';
 
 @Component({
   selector: 'am-alerts',
