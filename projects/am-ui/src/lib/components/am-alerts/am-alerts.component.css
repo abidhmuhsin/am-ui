@@ -1,5 +1,5 @@
 .alert-wrapper {
-  position: absolute;
+  position: fixed;
   right: 50px;
   top: 50px;
   /* transform: translate(-50px, 50px); when using top0,right0 */
