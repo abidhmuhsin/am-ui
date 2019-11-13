@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'am-ui-demo';
   selectedDate;
 
-  constructor(private alertService: AmAlertsService){}
+  constructor(public alertService: AmAlertsService){}
 
   onTabChange(tabTitle) {
     this.alertService.info(['Tab changed to: ' + tabTitle , 'Changed tabId captured from `tabChanged` EventEmitter'] , 5);
