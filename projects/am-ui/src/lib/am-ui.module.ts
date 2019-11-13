@@ -7,6 +7,7 @@ import { AmAccordionComponent } from './components/am-accordion/am-accordion.com
 import { AmDialogueComponent } from './components/am-dialogue/am-dialogue.component';
 import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
 import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.component';
+import { AmPartialDonutComponent } from './components/am-partial-donut/am-partial-donut.component';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -15,7 +16,8 @@ import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.
     AmAccordionComponent,
     AmDialogueComponent,
     AmAlertsComponent,
-    AmDatepickerComponent
+    AmDatepickerComponent,
+    AmPartialDonutComponent
   ],
   imports: [BrowserModule , BrowserAnimationsModule
   ],
@@ -25,7 +27,8 @@ import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.
     AmAccordionComponent,
     AmDialogueComponent,
     AmAlertsComponent,
-    AmDatepickerComponent
+    AmDatepickerComponent,
+    AmPartialDonutComponent
   ],
  // providers : [AmDialogueService]
  // AmDialogueService provided using annotation and mention in public-api.ts

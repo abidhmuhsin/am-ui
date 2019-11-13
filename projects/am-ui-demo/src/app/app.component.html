@@ -6,10 +6,8 @@
     <am-am-ui></am-am-ui>
   </div>
 
-      
   <app-alerts></app-alerts>
-  <app-confirm-dialogue></app-confirm-dialogue>    
-
+  <app-confirm-dialogue></app-confirm-dialogue>
 
   <div style="width: 60%">
     <h3>Reusable Angular Tabbed Pane Demo</h3>
@@ -45,8 +43,6 @@
       </am-tabbedpane>
     </am-tabbedpanes>
 
-
-    
     <h3>Reusable Angular Accordion Component Demo</h3>
     <p>
       <am-accordion class="" [title]="'Accordion #1'" [expanded]="true">
@@ -66,28 +62,45 @@
         <!-- Accordion Content -->
         <div>
           Yet again!
-          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-            mollit anim id est laborum."
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum."
           </p>
         </div>
       </am-accordion>
-    
     </p>
-
-    
   </div>
 
-
   <h3>Reusable Angular Datepicketr Demo</h3>
-<i> *This component is being developed and is in initial phase only</i>
-<div>
-  <br>Last clicked date : {{selectedDate}}
-  <am-datepicker (date)="selectedDate=$event"></am-datepicker>
- </div>
+  <i> *This component is being developed and is in initial phase only
+  </i>
+  <div>
+    Last clicked date : {{ selectedDate }}
+    <am-datepicker (date)="selectedDate = $event;alertService.info( $event.toString());"></am-datepicker>
+  </div>
 
+  <!-- Partial donut -->
+  <h3>Reusable Angular SVG Based Dynamic Graph Demo</h3>
+  Hover arc color to view tooltip  
+  <div>
+     <i> *This component is being developed using svg and pure css </i>   
+  </div>
+  <div style="width:40%;display: inline-block;">
+  <am-partial-donut 
+  [values]="[21.34, 22.56]" 
+  [total]="'1000'"
+  [colors]="['#6744c3','red']"></am-partial-donut>
+</div>
+<div   style="width:40%;display: inline-block;">
+  <am-partial-donut
+    [values]="[34, 34, 23, 2, 8]"
+    [total]="'67000'"
+  ></am-partial-donut>
+</div>
+  <!-- END Partial donut -->
 </div>
