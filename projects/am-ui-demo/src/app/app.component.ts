@@ -8,6 +8,7 @@ import { AmAlertsService } from 'am-ui';
 })
 export class AppComponent {
   title = 'am-ui-demo';
+  selectedDate;
 
   constructor(private alertService: AmAlertsService){}
 

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject, Observable, interval, timer } from 'rxjs';
-import { timeout } from 'rxjs/operators';
+
 export interface AlertMesssage {
   alertId: number;
   type: string;
@@ -15,7 +14,7 @@ export interface AlertMesssage {
 export class AmAlertsService {
 
   /*
-  private alertsSubject: Subject<any>; 
+  private alertsSubject: Subject<any>;
   Use a subject and emit each new alerts into component,
   then maintain alertsArray inside component so that
    no one from outside can modify already created alerts.
@@ -34,8 +33,7 @@ export class AmAlertsService {
   }
 
   private _createAlert(alertType: string, alertMessageLines: string[], timeToKeepOpen: number): number {
-    const newAlert: AlertMesssage =
-    {
+    const newAlert: AlertMesssage = {
       alertId: this.alertCounter++,
       type: alertType,
       multiLineMessage: alertMessageLines,

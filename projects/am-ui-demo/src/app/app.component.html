@@ -11,7 +11,7 @@
   <app-confirm-dialogue></app-confirm-dialogue>    
 
 
-  <div style="width: 50%">
+  <div style="width: 60%">
     <h3>Reusable Angular Tabbed Pane Demo</h3>
 
     <am-tabbedpanes (tabChanged)="onTabChange($event)">
@@ -81,4 +81,13 @@
 
     
   </div>
+
+
+  <h3>Reusable Angular Datepicketr Demo</h3>
+<i> *This component is being developed and is in initial phase only</i>
+<div>
+  <br>Last clicked date : {{selectedDate}}
+  <am-datepicker (date)="selectedDate=$event"></am-datepicker>
+ </div>
+
 </div>

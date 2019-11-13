@@ -1,0 +1,39 @@
+    <div  class="calender">
+    
+    <div  class="monthyearpicker">
+    
+    <span class="prev-month">
+      <span class="cell-button" (click)="loadPrevMonth()">&lt;</span>
+    </span>
+    
+      <span class="year-month" >
+       <span  class="year-month-text">
+          {{CURRENT_MONTH +1}} {{CURRENT_YEAR}}
+       </span>
+      </span>
+    
+    <span class="next-month">
+      <span  class="cell-button" (click)="loadNextMonth()">&gt;</span>
+    </span>
+    
+    </div>
+    
+    <div  class="datepicker">
+       <div  class="cell" *ngFor="let weekDay of WEEK_DAYS">
+         <span class="weekday-text"> {{weekDay}}</span>
+       </div>
+    
+        <div  class="cell" *ngFor="let date of MONTH_DATES_PREV">
+       <span class="date-text other-months">{{date}}</span>
+      </div>
+    
+      <div class="cell" *ngFor="let date of MONTH_DATES" >
+       <span class="date-text" [class.selected-date]="isSelectedDate(date)" (click)="dateClicked(date)">{{date}}</span>
+      </div>
+     
+      <div  *ngFor="let date of MONTH_DATES_NEXT" class="cell">
+       <span class="date-text other-months">{{date}}</span>
+      </div>
+    </div>
+    
+    </div>

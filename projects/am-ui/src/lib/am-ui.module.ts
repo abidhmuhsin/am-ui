@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AmUiComponent } from './am-ui.component';
 import { AmTabbedpaneComponent, AmTabbedpanesComponent } from './components/am-tabbedpane/am-tabbedpane.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AmAccordionComponent } from './components/am-accordion/am-accordion.component';
 import { AmDialogueComponent } from './components/am-dialogue/am-dialogue.component';
 import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
+import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.component';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -13,7 +14,8 @@ import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
     AmTabbedpanesComponent,
     AmAccordionComponent,
     AmDialogueComponent,
-    AmAlertsComponent
+    AmAlertsComponent,
+    AmDatepickerComponent
   ],
   imports: [BrowserModule , BrowserAnimationsModule
   ],
@@ -22,7 +24,8 @@ import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
     AmTabbedpanesComponent,
     AmAccordionComponent,
     AmDialogueComponent,
-    AmAlertsComponent
+    AmAlertsComponent,
+    AmDatepickerComponent
   ],
  // providers : [AmDialogueService]
  // AmDialogueService provided using annotation and mention in public-api.ts

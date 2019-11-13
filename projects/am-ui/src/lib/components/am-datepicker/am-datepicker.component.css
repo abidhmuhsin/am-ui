@@ -1,0 +1,88 @@
+:host {
+    /* border: 1px solid dimgray; */
+    display: block;
+    padding: 5px;
+    width:250px;
+    font-size: 13px;
+    line-height: 30px; /*for making square -- width/noofrows  approx~250/7=35px - border */
+}
+
+.calender {
+  width:100%;
+  border: 1px solid #7fec7f;
+}
+
+.monthyearpicker {
+  width:calc(100% - 10px);
+  padding:5px;
+}
+
+.datepicker {
+  width:calc(100% - 10px);
+  padding:5px;
+  /* border: 1px solid grey; */
+}
+
+.cell {
+  display: inline-flex;
+  width: 14.2857%;
+/* do not apply border or anything here..just to didvide into 7 equeal cols - use 100/7 as width % */
+}
+.weekday-text {
+width: 100%;
+border: 1px solid #8cd297;
+margin: 0.10em;
+text-align: center;
+}
+
+.date-text {
+width: 100%;
+border-radius: 50%;
+border: 1px solid #f3b96d;
+/* padding: 0 0.25em; */
+margin: 0.10em;
+text-align: center;
+cursor: pointer;
+}
+.date-text:hover {
+background-color:#ea9629;
+color:#fff;
+}
+.date-text.other-months {
+color: #d4c1c1;
+border: 1px solid #f3dec2;
+cursor: default;
+}
+.date-text.other-months:hover {
+background-color:unset;
+color: #d4c1c1;
+}
+.selected-date {
+ background-color: #e9bc97;
+}
+
+.prev-month, .next-month {
+width:14.2857%;
+display: inline-flex;
+}
+.prev-month .cell-button,.next-month .cell-button {
+width: 100%;
+font-weight: bold;
+border-radius: 50%;
+border: 1px solid #9fbce7;
+text-align: center;
+cursor: pointer;
+}
+.prev-month .cell-button:hover,.next-month .cell-button:hover {
+background-color:#9fbce7;
+color:#fff;
+}
+.year-month {
+  width:71.4286%;
+  display: inline-flex;
+}
+
+.year-month .year-month-text {
+  text-align: center;
+  width: 100%;
+}
