@@ -1,5 +1,6 @@
 <div class="alert-wrapper">
-  <ng-container *ngFor="let alert of alertsService.getAllAlerts()">
+    <div class="alert-wrapper1">
+  <ng-container *ngFor="let alert of alertsService.getAllAlerts().reverse()">
     <div *ngIf="!alert.isClosed" class="alert" [ngClass]="alert.type">
       <div class="close-button" (click)="close(alert)">X</div>
       <ng-container *ngFor="let message of alert.multiLineMessage">
@@ -9,4 +10,5 @@
       </ng-container>
     </div>
   </ng-container>
+</div>
 </div>
