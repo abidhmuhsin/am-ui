@@ -1,0 +1,63 @@
+:host {
+    display: block;  
+    z-index: 10000; /* full screen on top */
+}
+
+.img-preview-wrapper .img-bg {
+    position: fixed; /* if absolute screen will scroll down*/
+    top: 5%;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 11;
+  }
+
+.img-preview-wrapper button {   
+    outline: none;
+    border:0px;
+    font-weight: bold;
+    border-radius: 50%;
+    height:20px;
+    cursor:pointer;
+
+    z-index: 11;
+ }
+ .img-preview-wrapper button:hover {
+   background-color: #b1b1b1;;
+ }
+
+.img-preview-wrapper .buttons {
+    position: relative;
+    top: 50%;
+  }
+
+ .img-preview-wrapper .buttons > .button-next {
+    float:right;
+    margin-right:-15px;
+ }
+  .img-preview-wrapper .buttons > .button-prev {
+    float:left;
+    margin-left:-15px;
+ }
+
+
+.img-preview-wrapper .button-close{
+    position: fixed;
+    right: 5%;
+    top: 2%;
+ }
+
+
+.backdrop {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+}

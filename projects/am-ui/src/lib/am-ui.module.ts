@@ -8,6 +8,8 @@ import { AmDialogueComponent } from './components/am-dialogue/am-dialogue.compon
 import { AmAlertsComponent } from './components/am-alerts/am-alerts.component';
 import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.component';
 import { AmPartialDonutComponent } from './components/am-partial-donut/am-partial-donut.component';
+import { AmImgGalleryComponent } from './components/am-img-gallery/am-img-gallery.component';
+import { AmImgPreviewComponent } from './components/am-img-preview/am-img-preview.component';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -17,7 +19,9 @@ import { AmPartialDonutComponent } from './components/am-partial-donut/am-partia
     AmDialogueComponent,
     AmAlertsComponent,
     AmDatepickerComponent,
-    AmPartialDonutComponent
+    AmPartialDonutComponent,
+    AmImgGalleryComponent,
+    AmImgPreviewComponent
   ],
   imports: [BrowserModule , BrowserAnimationsModule
   ],
@@ -28,7 +32,9 @@ import { AmPartialDonutComponent } from './components/am-partial-donut/am-partia
     AmDialogueComponent,
     AmAlertsComponent,
     AmDatepickerComponent,
-    AmPartialDonutComponent
+    AmPartialDonutComponent,
+    AmImgGalleryComponent,
+    AmImgPreviewComponent
   ],
  // providers : [AmDialogueService]
  // AmDialogueService provided using annotation and mention in public-api.ts

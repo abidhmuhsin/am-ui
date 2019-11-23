@@ -1,0 +1,11 @@
+<div class="img-gallery-wrapper">
+    <div *ngIf="images.length>0">
+            <div class="image-row">
+                <a *ngFor="let image of images; let i = index" class="image-bg"
+                    style="background-image:url('')" target="_blank">
+                    <img class="image-bg-placeholder" (click)="onImageClicked(i)"
+                     src={{image.url}} alt={{image.alt}} />
+                </a>
+            </div>
+    </div>
+</div>

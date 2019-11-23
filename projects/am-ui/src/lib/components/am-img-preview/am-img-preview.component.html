@@ -1,0 +1,15 @@
+<div class="img-preview-wrapper">
+
+
+	<div class="img-bg" [ngStyle]="{'background-image': 'url('+selectedImgUrl+')'}">
+		<div class="buttons" *ngIf="showNavButtons">
+			<button class="button-prev" (click)="prevImage()"><</button>
+			<button class="button-next" (click)="nextImage()">></button>
+		</div>
+	</div>
+
+	<button class="button-close" (click)="closePreview()">x</button>
+
+	<div class="backdrop"></div>
+
+</div>

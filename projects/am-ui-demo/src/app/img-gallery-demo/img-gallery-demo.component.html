@@ -1,0 +1,14 @@
+<h3>Reusable Responsive Angular Image Gallery Demo</h3>
+This contains two components  - Thumbnail Grid and Fullscreen Preview
+
+<am-img-gallery [images]="images" (imageClicked)="openImgPreview($event)">
+</am-img-gallery>
+<div *ngIf="showPreview">
+  <am-img-preview
+    [images]="images"
+    [selectedImage]="selectedImage"
+    (closed)="showPreview = false"
+  ></am-img-preview>
+  <!-- <am-img-preview [selectedImgUrl]="selectedImage.url"
+(onClose)="showPreview=false"></am-img-preview> -->
+</div>
