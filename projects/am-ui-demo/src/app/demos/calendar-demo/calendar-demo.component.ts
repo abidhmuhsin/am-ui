@@ -8,6 +8,7 @@ import { AmAlertsService } from 'am-ui';
 })
 export class CalendarDemoComponent implements OnInit,OnDestroy {
 
+  selectedDate;
   constructor(public alertsService:AmAlertsService) { }
 
   ngOnInit() {
