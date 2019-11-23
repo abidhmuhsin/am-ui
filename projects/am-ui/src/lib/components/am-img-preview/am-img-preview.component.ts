@@ -25,7 +25,7 @@ export class AmImgPreviewComponent implements OnInit {
       return;
     } else {
       this.showNavButtons = true;
-      this.showImageAtIndex(0);
+      this.showImageAtIndex(this.selectedImage.index);
     }
   }
 
