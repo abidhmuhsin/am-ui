@@ -14,6 +14,10 @@ import { ConfirmDialogDemoComponent } from './confirm-dialog-demo/confirm-dialog
 import { AlertsDemoComponent } from './alerts-demo/alerts-demo.component';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
 import { SvgDonutDemoComponent } from './svg-donut-demo/svg-donut-demo.component';
+import { DropdownDemoComponent } from './dropdown-demo/dropdown-demo.component';
+import { ModalDemoComponent } from './modal-demo/modal-demo.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
+
 @NgModule({
 
     imports: [
@@ -31,7 +35,10 @@ import { SvgDonutDemoComponent } from './svg-donut-demo/svg-donut-demo.component
         AlertsDemoComponent,
         ConfirmDialogDemoComponent,
         CalendarDemoComponent,
-        SvgDonutDemoComponent
+        SvgDonutDemoComponent,
+        DropdownDemoComponent,
+        ModalDemoComponent,
+        SidePanelComponent
     ],
     providers: []
 })

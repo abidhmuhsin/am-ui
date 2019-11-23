@@ -9,6 +9,9 @@ import { AlertsDemoComponent } from './alerts-demo/alerts-demo.component';
 import { ConfirmDialogDemoComponent } from './confirm-dialog-demo/confirm-dialog-demo.component';
 import { CalendarDemoComponent } from './calendar-demo/calendar-demo.component';
 import { SvgDonutDemoComponent } from "./svg-donut-demo/svg-donut-demo.component";
+import { DropdownDemoComponent } from "./dropdown-demo/dropdown-demo.component";
+import { ModalDemoComponent } from "./modal-demo/modal-demo.component";
+import { SidePanelComponent } from "./side-panel/side-panel.component";
 
 
 @NgModule({
@@ -23,7 +26,11 @@ import { SvgDonutDemoComponent } from "./svg-donut-demo/svg-donut-demo.component
             { path: 'alerts', component: AlertsDemoComponent },
             { path: 'confirm-dialog', component: ConfirmDialogDemoComponent },
             { path: 'calendar', component: CalendarDemoComponent },
-            { path: 'svg-donut', component: SvgDonutDemoComponent }
+            { path: 'svg-donut', component: SvgDonutDemoComponent },
+
+            { path: 'dropdown', component: DropdownDemoComponent },
+            { path: 'modal', component: ModalDemoComponent },
+            { path: 'side-panel', component: SidePanelComponent }
 
         ])
     ],

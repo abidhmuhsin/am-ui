@@ -1,0 +1,13 @@
+<div class="dropdown">
+    <button class="dropdown-btn">  
+
+      <ng-content></ng-content> <i class="down-arrow"></i>
+
+    </button>
+    <div class="dropdown-content">
+      <a *ngFor="let item of itemList;" (click)="onSelected(item)"
+        [class.selected]="item.key === selectedKey">
+        {{item.value}}</a>
+    </div>
+  </div>
+

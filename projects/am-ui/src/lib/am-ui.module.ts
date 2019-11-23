@@ -11,6 +11,7 @@ import { AmPartialDonutComponent } from './components/am-partial-donut/am-partia
 import { AmImgGalleryComponent } from './components/am-img-gallery/am-img-gallery.component';
 import { AmImgPreviewComponent } from './components/am-img-preview/am-img-preview.component';
 import { CommonModule } from '@angular/common';
+import { AmDropdownComponent } from './components/am-dropdown/am-dropdown.component';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -22,7 +23,8 @@ import { CommonModule } from '@angular/common';
     AmDatepickerComponent,
     AmPartialDonutComponent,
     AmImgGalleryComponent,
-    AmImgPreviewComponent
+    AmImgPreviewComponent,
+    AmDropdownComponent
   ],
   imports: [CommonModule],
   /* imports: [BrowserModule , BrowserAnimationsModule]
@@ -39,7 +41,9 @@ import { CommonModule } from '@angular/common';
     AmDatepickerComponent,
     AmPartialDonutComponent,
     AmImgGalleryComponent,
-    AmImgPreviewComponent
+    AmImgPreviewComponent,
+    AmDropdownComponent
+
   ],
  // providers : [AmDialogueService]
  // AmDialogueService provided using annotation and mention in public-api.ts
