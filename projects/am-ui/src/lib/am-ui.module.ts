@@ -10,6 +10,7 @@ import { AmDatepickerComponent } from './components/am-datepicker/am-datepicker.
 import { AmPartialDonutComponent } from './components/am-partial-donut/am-partial-donut.component';
 import { AmImgGalleryComponent } from './components/am-img-gallery/am-img-gallery.component';
 import { AmImgPreviewComponent } from './components/am-img-preview/am-img-preview.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -23,8 +24,12 @@ import { AmImgPreviewComponent } from './components/am-img-preview/am-img-previe
     AmImgGalleryComponent,
     AmImgPreviewComponent
   ],
-  imports: [BrowserModule , BrowserAnimationsModule
-  ],
+  imports: [CommonModule],
+  /* imports: [BrowserModule , BrowserAnimationsModule]
+  --> Works only if library is used in Master Module.. Throws error when used in Secondary Modules during loading
+  imports: [BrowserModule , BrowserAnimationsModule]  --> getting error
+  Error: BrowserModule has already been loaded. If you need access to common directives
+   such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.*/
   exports: [AmUiComponent,
     AmTabbedpaneComponent,
     AmTabbedpanesComponent,
