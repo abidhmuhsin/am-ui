@@ -1,16 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AmAlertsService } from 'am-ui';
 
 @Component({
-  selector: 'app-alerts',
-  templateUrl: './alerts.component.html'
+  selector: 'app-alerts-demo',
+  templateUrl: './alerts-demo.component.html',
+  styleUrls: ['./alerts-demo.component.css']
 })
-export class AlertsComponent {
+export class AlertsDemoComponent implements OnInit, OnDestroy{
 
+ 
   message = 'Custom message';
 
   constructor(public alertService: AmAlertsService) { }
 
+  ngOnInit() {
+    this.newAlert();
+  }
+  ngOnDestroy() {
+    this.alertService.clearAll();
+  }
 
   newAlert() {
     this.alertService.info('This is an info message!')
@@ -24,4 +32,5 @@ export class AlertsComponent {
   clearAll() {
     this.alertService.clearAll().info('New Alert After clearing all existing');
   }
+
 }

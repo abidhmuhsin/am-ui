@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { AmDialogueService, AmAlertsService } from 'am-ui';
 
 @Component({
-  selector: 'app-confirm-dialogue',
-  templateUrl: './confirm-dialogue.component.html'
+  selector: 'app-confirm-dialog-demo',
+  templateUrl: './confirm-dialog-demo.component.html',
+  styleUrls: ['./confirm-dialog-demo.component.css']
 })
-export class ConfirmDialogueComponent {
+export class ConfirmDialogDemoComponent implements OnDestroy {
 
-  constructor(private dialog: AmDialogueService,private alertsService: AmAlertsService) { }
+
+  constructor(private dialog: AmDialogueService, private alertsService: AmAlertsService) { }
+
+  ngOnDestroy() {
+    this.alertsService.clearAll();
+  }
+
 
   message =  'Click Yes to confirm. No to reject or Cancel to Cancel the dialog without any action';
   response;

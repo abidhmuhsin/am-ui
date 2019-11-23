@@ -1,20 +1,21 @@
+/* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConfirmDialogueComponent } from './confirm-dialogue.component';
+import { CalendarDemoComponent } from './calendar-demo.component';
 
-describe('ConfirmDialogueComponent', () => {
-  let component: ConfirmDialogueComponent;
-  let fixture: ComponentFixture<ConfirmDialogueComponent>;
+describe('CalendarDemoComponent', () => {
+  let component: CalendarDemoComponent;
+  let fixture: ComponentFixture<CalendarDemoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ConfirmDialogueComponent ]
+      declarations: [ CalendarDemoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ConfirmDialogueComponent);
+    fixture = TestBed.createComponent(CalendarDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

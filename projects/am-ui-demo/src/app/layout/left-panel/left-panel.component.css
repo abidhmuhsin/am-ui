@@ -1,0 +1,26 @@
+:host {
+    display:block;
+    position: fixed;
+    top:0;
+    left:0;
+    width:200px;
+    border:1px solid grey;
+}
+
+a {
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-color: #f0f0f0;
+    /* box-shadow: inset -7px 2px 0 0px; */
+    border-bottom: 1px solid;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color:#757575;
+}
+
+a:hover {
+    background-color: #e1e4e4;
+    color:black;
+}

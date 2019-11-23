@@ -53,14 +53,13 @@ export class ImgGalleryDemoComponent {
   },
   {
     index: 8,
-    url: 'assets/images/photo-9.jpg',
-    alt: 'Demonstrating al-text'
-  },
-  {
-    index: 8,
     url: 'assets/images/photo-10.jpg',
-    alt: 'Broken Link - Demonstrating alt-text'
-  }
+    alt: 'Broken image 9 - Demonstrating alt-text'
+  },  {
+    index: 9,
+    url: 'assets/images/photo-9.jpg',
+    alt: 'This is image 10'
+  },
   ];
 
   openImgPreview($ev) {
