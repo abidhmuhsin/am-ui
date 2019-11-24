@@ -1,0 +1,58 @@
+:host {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    min-width: 100px;
+    margin:5px 2px;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  }
+  .input-typeahead {
+     background-color: rgba(187, 188, 238, 0.5);
+      color: #0e0e0e;
+      box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.2);
+      /* border: none; */
+      outline: none;
+      height: 100%;
+      width: calc(100% - 20px); /* subtract padding*/
+      padding: 0 10px;
+      border-bottom: 1px solid rgb(39, 19, 129);
+  }
+  
+  .dropdown-relative-container {
+    position: relative; /*required so as to always align relative to previous element*/
+  }
+  .dropdown-content {
+      display: none;
+      position: absolute; /*absolute element should be placed in relative wrapper/container so as to always align relative to previous element*/
+      right: 0;
+      background-color: rgba(28, 41, 51, 0.9);
+      /* min-width: 150px; */
+      width: 100%;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      
+      height: 100px;
+      overflow-y: scroll;
+  }
+  
+  .wrapper:hover .dropdown-content {
+      display: block;
+  }
+  
+  
+  .dropdown-content a {
+      color: rgb(214, 204, 204);
+      padding: 0 16px;
+      text-decoration: none;
+      display: block;
+        height:35px;
+        line-height:35px;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #f0f0f0;
+      color:#0078cf;
+  }

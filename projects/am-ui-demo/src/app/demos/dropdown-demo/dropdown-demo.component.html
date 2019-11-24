@@ -1,11 +1,16 @@
 
 
-
-{{usage}}
+  <h3>Reusable Angular Dropdown Component Demo</h3>
+Usage: {{usage}}
 <br><br>
 
 {{selectedItem}}
 <br>
 <br>
-<am-dropdown [itemList]="items" (selected)="onSelection($event)"> Item List</am-dropdown>
+<am-dropdown [itemList]="items" (selected)="onSelection($event)" selectedKey> Item List</am-dropdown>
+
+
+<am-dropdown [itemList]="items" (selected)="onSelection($event)" [selectedKey]="'i5'"> Item List</am-dropdown> - Preselected
+
+<am-typeahead [itemList]="items" (selected)="onSelection($event)" [selectedKey]="'i5'"> Item List</am-typeahead> -Input Based
 

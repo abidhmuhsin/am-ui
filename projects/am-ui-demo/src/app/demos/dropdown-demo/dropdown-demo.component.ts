@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownDemoComponent implements OnInit {
 
-  public usage = `<am-dropdown [itemList]="items" (selected)="onSelection($event)"> Item List</am-dropdown>`;
+  public usage = `<am-dropdown [itemList]="items" (selected)="onSelection($event)" [selectedKey]="'i5'"> Item List</am-dropdown>`;
   public selectedItem;
   public items: any[] = [{ key: 'i1', value: 'item1' },
                          { key: 'i2', value: 'item2' },

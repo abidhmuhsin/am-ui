@@ -1,7 +1,13 @@
-.dropdown {
-  position: relative;
+:host {
   display: inline-block;
   width: 200px;
+  height: 30px;
+  min-width: 100px;
+  margin:5px 2px;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
 }
 .dropdown-btn {
   background-color: #000000;
@@ -16,9 +22,12 @@
   height: 35px;
 }
 
+.dropdown-relative-container {
+  position: relative; /*required so as to always align relative to previous element*/
+}
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: absolute; /*absolute element should be placed in relative wrapper/container so as to always align relative to previous element*/
   right: 0;
   background-color: rgba(28, 41, 51, 0.7);
   /* min-width: 150px; */
@@ -27,7 +36,7 @@
   z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.wrapper:hover .dropdown-content {
   display: block;
 }
 
@@ -52,7 +61,7 @@
 i.down-arrow {
   border: solid #b9b9b9;
   border-width: 0 3px 3px 0;
-  display: inline-block;
+  /* display: inline-block; */
   padding: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);

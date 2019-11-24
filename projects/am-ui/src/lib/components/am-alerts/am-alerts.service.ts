@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 
-export interface AlertMesssage {
+export interface AlertMessage {
   alertId: number;
   type: string;
   multiLineMessage: string[];
   timeOut: number; // -1 for infinite/ manual close only
   isClosed: boolean;
 }
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class AmAlertsService {
    no one from outside can modify already created alerts.
   */
   private alertCounter: number;
-  private allAlerts: AlertMesssage[];
+  private allAlerts: AlertMessage[];
   private maxAlertsInBuffer: number;
   private defaultTimeOut: number; // in seconds
 
@@ -33,7 +34,7 @@ export class AmAlertsService {
   }
 
   private _createAlert(alertType: string, alertMessageLines: string[], timeToKeepOpen: number): number {
-    const newAlert: AlertMesssage = {
+    const newAlert: AlertMessage = {
       alertId: this.alertCounter++,
       type: alertType,
       multiLineMessage: alertMessageLines,

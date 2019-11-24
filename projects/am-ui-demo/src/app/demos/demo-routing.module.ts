@@ -12,6 +12,7 @@ import { SvgDonutDemoComponent } from "./svg-donut-demo/svg-donut-demo.component
 import { DropdownDemoComponent } from "./dropdown-demo/dropdown-demo.component";
 import { ModalDemoComponent } from "./modal-demo/modal-demo.component";
 import { SidePanelComponent } from "./side-panel/side-panel.component";
+import { TypeaheadDemoComponent } from './typeahead-demo/typeahead-demo.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SidePanelComponent } from "./side-panel/side-panel.component";
             { path: 'svg-donut', component: SvgDonutDemoComponent },
 
             { path: 'dropdown', component: DropdownDemoComponent },
+            { path: 'typeahead', component: TypeaheadDemoComponent },
             { path: 'modal', component: ModalDemoComponent },
             { path: 'side-panel', component: SidePanelComponent }
 

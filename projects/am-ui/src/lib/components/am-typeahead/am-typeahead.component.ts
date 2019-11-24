@@ -1,18 +1,14 @@
 import { Component, OnInit, Input , Output, EventEmitter } from '@angular/core';
 import { DropDownItem } from '../../modals/modals';
 
-export interface DropDownItem {
-  key: string | number;
-  value: string | number;
-}
-
 @Component({
-  selector: 'am-dropdown',
-  templateUrl: './am-dropdown.component.html',
-  styleUrls: ['./am-dropdown.component.css']
+  selector: 'am-typeahead',
+  templateUrl: './am-typeahead.component.html',
+  styleUrls: ['./am-typeahead.component.css']
 })
-export class AmDropdownComponent implements OnInit {
+export class AmTypeaheadComponent implements OnInit {
 
+ 
   @Input()
   public itemList: [DropDownItem];
   @Output()
@@ -20,11 +16,13 @@ export class AmDropdownComponent implements OnInit {
   @Input()
   public selectedKey: any;
   public selectedValue: any;
+  public filteredItems;
 
   constructor() {
   }
 
   ngOnInit() {
+    this.filteredItems = this.itemList;
   }
 
   onSelected($ev: DropDownItem) {
@@ -33,4 +31,11 @@ export class AmDropdownComponent implements OnInit {
     this.selectedValue = $ev.value;
   }
 
+  applyFilter(query: string){
+    this.filteredItems = this.itemList.filter(item => {
+      return item.value.includes(query.toLowerCase()) 
+    })
+    console.log(query)
+    //return this.filteredItems;  
+  }
 }

@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <!-- <button class="input-typeahead dropdown-trigger">  
+    <ng-content></ng-content> <i class="down-arrow"></i>
+  </button>  -->
+
+  <input placeholder="Try Filter" class="input-typeahead dropdown-trigger" #query (input)="applyFilter(query.value)"/> 
+
+<div class="dropdown-relative-container">
+     <div class="dropdown-content">
+   <a *ngFor="let item of filteredItems;" (click)="onSelected(item)">
+      {{item.value}}</a>
+    <span *ngIf="filteredItems.length === 0"> No matches.</span>
+  </div>
+</div>
+</div>
