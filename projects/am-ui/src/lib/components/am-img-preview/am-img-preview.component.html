@@ -3,12 +3,15 @@
 
 	<div class="img-bg" [ngStyle]="{'background-image': 'url('+selectedImgUrl+')'}">
 		<div class="buttons" *ngIf="showNavButtons">
-			<button class="button-prev" (click)="prevImage()"><</button>
-			<button class="button-next" (click)="nextImage()">></button>
+			<!-- <button class="button-prev" (click)="prevImage()"><</button>
+			<button class="button-next" (click)="nextImage()">></button> -->
+			<i class="button-prev arrow left" (click)="prevImage()"></i>
+			<i class="button-next arrow right" (click)="prevImage()"></i>
 		</div>
 	</div>
 
-	<button class="button-close" (click)="closePreview()">x</button>
+	<!-- <button class="button-close" (click)="closePreview()">x</button> -->
+	<i class="close" (click)="closePreview()"></i>
 
 	<div class="backdrop"></div>
 
