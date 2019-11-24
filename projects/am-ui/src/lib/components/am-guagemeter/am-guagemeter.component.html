@@ -1,0 +1,93 @@
+<div class="donut-wrapper">
+    <svg width="100%" height="200px" viewBox="0 0 42 42" class="donut">
+      <defs xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .total {
+            fill: #959595;
+            font-size: 5px;
+            font-family: OpenSans-Regular, Open Sans;
+          }
+  
+          .big-percent {
+            fill: #1656bf;
+            font-size: 10px;
+            font-family: SFUIText-Light, SF UI Text;
+            font-weight: 300;
+          }
+          .donut {
+            /* background-color:grey; */
+            pointer-events: visibleStroke; /* SVG only */
+          }
+          .donut-segment {
+            /* cursor:pointer; */
+          }
+        </style>
+      </defs>
+  
+      <circle
+        class="donut-bg"
+        cx="21"
+        cy="21"
+        r="15.91549430918954"
+        fill="transparent"
+        stroke="#d9d9d9"
+        stroke-width="3"
+        stroke-dasharray="60 40"
+        stroke-dashoffset="75"
+      ></circle>
+  
+      <circle
+        (mouseenter)="showTooltip($event, arcDetail)"
+        (mouseleave)="hideToolTip()"
+        class="donut-segment"
+        cx="21"
+        cy="21"
+        r="15.91549430918954"
+        fill="transparent"
+        [attr.stroke]="arcDetail.color"
+        stroke-width="3"
+        [attr.stroke-dasharray]="
+        arcDetail.relativePercent + ' ' + (100 - arcDetail.relativePercent)
+        "
+        [attr.stroke-dashoffset]="arcDetail.offset"
+      ></circle>
+  
+      <text
+        xmlns="http://www.w3.org/2000/svg"
+        class="total"
+        transform="translate(32 12)"
+        data-name="12,800"
+      >
+        <tspan x="0" y="0"> Total: {{ total }}</tspan>
+      </text>
+      <text
+        xmlns="http://www.w3.org/2000/svg"
+        class="big-percent"
+        [ngStyle]="{ fill: color }"
+        transform="translate(5 13)"
+        data-name="54.68%"
+      >
+        <tspan x="12" y="12">{{ bigPercent }}</tspan>
+      </text>
+    </svg>
+  
+    <div
+      class="tooltip"
+      *ngIf="tooltipEnabled"
+      [ngStyle]="{ top: toolTipStyle.top, left: toolTipStyle.left }"
+    >
+      <div
+        class="tooltiptext"
+        [ngStyle]="{ 'background-color': toolTipStyle.color }"
+      >
+        {{ tootipText }}
+        <!-- {{ toJSONString(tootTipPos) }} -->
+        <span
+          class="arrow"
+          [ngStyle]="{ 'border-top-color': toolTipStyle.color }"
+        >
+        </span>
+      </div>
+    </div>
+  </div>
+  

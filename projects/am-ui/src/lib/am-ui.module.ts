@@ -11,6 +11,7 @@ import { AmImgPreviewComponent } from './components/am-img-preview/am-img-previe
 import { CommonModule } from '@angular/common';
 import { AmDropdownComponent } from './components/am-dropdown/am-dropdown.component';
 import { AmTypeaheadComponent } from './components/am-typeahead/am-typeahead.component';
+import { AmGuagemeterComponent } from './components/am-guagemeter/am-guagemeter.component';
 
 @NgModule({
   declarations: [AmUiComponent,
@@ -24,7 +25,8 @@ import { AmTypeaheadComponent } from './components/am-typeahead/am-typeahead.com
     AmImgGalleryComponent,
     AmImgPreviewComponent,
     AmDropdownComponent,
-    AmTypeaheadComponent
+    AmTypeaheadComponent,
+    AmGuagemeterComponent
   ],
   exports: [AmUiComponent,
     AmTabbedpaneComponent,
@@ -37,7 +39,8 @@ import { AmTypeaheadComponent } from './components/am-typeahead/am-typeahead.com
     AmImgGalleryComponent,
     AmImgPreviewComponent,
     AmDropdownComponent,
-    AmTypeaheadComponent
+    AmTypeaheadComponent,
+    AmGuagemeterComponent
 
   ],
   imports: [CommonModule],

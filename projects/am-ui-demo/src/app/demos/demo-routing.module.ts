@@ -13,6 +13,7 @@ import { DropdownDemoComponent } from "./dropdown-demo/dropdown-demo.component";
 import { ModalDemoComponent } from "./modal-demo/modal-demo.component";
 import { SidePanelComponent } from "./side-panel/side-panel.component";
 import { TypeaheadDemoComponent } from './typeahead-demo/typeahead-demo.component';
+import { SvgGraphsDemoComponent } from "./svg-graphs-demo/svg-graphs-demo.component";
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { TypeaheadDemoComponent } from './typeahead-demo/typeahead-demo.componen
             { path: 'alerts', component: AlertsDemoComponent },
             { path: 'confirm-dialog', component: ConfirmDialogDemoComponent },
             { path: 'calendar', component: CalendarDemoComponent },
-            { path: 'svg-donut', component: SvgDonutDemoComponent },
+            { path: 'svg-graphs', component: SvgGraphsDemoComponent },
 
             { path: 'dropdown', component: DropdownDemoComponent },
             { path: 'typeahead', component: TypeaheadDemoComponent },

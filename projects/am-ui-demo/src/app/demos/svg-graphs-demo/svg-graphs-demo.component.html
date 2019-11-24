@@ -1,0 +1,33 @@
+
+  <!-- Partial donut -->
+  <h3>Reusable Angular SVG Based Dynamic Graph Demo</h3>
+  Hover arc color to view tooltip  
+
+<h4>1. GuageMeter</h4>
+
+<am-guagemeter style="width:40%;" [value]="'34000'" [total]="'67000'"></am-guagemeter>
+
+<am-guagemeter style="width:40%;" [value]="'1000'" [total]="'1000'"  [color]="'#00c72e'"></am-guagemeter>
+
+<am-guagemeter style="width:40%;" value="60" total="600" color="red"></am-guagemeter>
+
+
+
+<h4>2. Partial Donut</h4>
+
+  <div>
+     <i> *This component is being developed using svg and pure css </i>   
+  </div>
+  <div style="width:40%;display: inline-block;">
+  <am-partial-donut 
+  [values]="[21.34, 22.56]" 
+  [total]="'1000'"
+  [colors]="['#6744c3','red']"></am-partial-donut>
+</div>
+<div   style="width:40%;display: inline-block;">
+  <am-partial-donut
+    [values]="[34, 34, 23, 2, 8]"
+    [total]="'67000'"
+  ></am-partial-donut>
+</div>
+  <!-- END Partial donut -->

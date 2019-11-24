@@ -1,0 +1,41 @@
+:host {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .tooltip {
+    /* position: relative; */
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+  
+    position: absolute;
+  }
+  
+  .tooltip .tooltiptext {
+    /* width: 120px; */
+    background-color: rgb(255, 71, 71);
+    color: #fff;
+    text-align: center;
+    /* border-radius: 6px; */
+    padding: 5px 10px;
+    z-index: 1;
+    /* top: -100%; */
+    left: -50%;
+    /* bottom:100%; */
+    position: relative;
+    /* white-space: nowrap; */
+    /* margin-left: 0;*/
+    margin-top: -45px;
+    /* height: 15px; */
+  }
+  .arrow {
+    content: ' ';
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%; /* 15px;*/
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+  }
+  
